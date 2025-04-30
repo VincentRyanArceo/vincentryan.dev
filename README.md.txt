@@ -22,3 +22,19 @@ This website is designed to:
 
 ## 📂 Project Structure
 
+
+## 🌐 Live Site
+
+[https://vincentryanarceo.github.io/vincentryan.dev/](https://vincentryanarceo.github.io/vincentryan.dev/)
+
+## 📬 Contact
+
+Feel free to connect with me:
+
+- GitHub: [@VincentRyanArceo](https://github.com/VincentRyanArceo)
+- LinkedIn: [vincentryanarceo](https://www.linkedin.com/in/vincentryanarceo/)
+- Email: Vincent.Ryan.Arceo@gmail.com
+
+---
+
+Thanks for checking out my work — this site will continue to grow as I learn and build!
