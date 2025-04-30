@@ -1,26 +1,33 @@
 # Vincent-Ryan Arceo | Developer Portfolio
 
-Welcome to my personal developer portfolio website! This site was built to document my journey transitioning from a real estate professional to a full-stack web developer. It serves as a live resume, a showcase of my coding projects, and a hub for tracking my progress as I grow in the tech industry.
+This is the source code and content for my personal developer portfolio, created to support my transition from a successful career in real estate to full-stack software development. This site serves as a live resume, a hub for current and upcoming projects, and a reflection of my continuous growth as a developer.
 
-## 🚀 Purpose
+## 🎓 Background
 
-This website is designed to:
+I recently completed an intensive full-stack Java development bootcamp through **Tech Elevator**, where I gained experience building robust, database-driven applications using technologies like **Java, Spring Boot, PostgreSQL, and Vue.js**.
 
-- Highlight my professional background and technical skills
-- Showcase real-world coding projects, including:
-  - A mock music & merch store for my band, Shadyside
-  - Java and Python mini-games and logic challenges
-- Share downloadable resources like my resume and cover letters
-- Provide an up-to-date contact point for employers and collaborators
+## 🧭 About This Project
 
-## 🛠️ Technologies Used
+This site demonstrates:
+- Front-end design and semantic HTML structure
+- Clean CSS organization and layout
+- Version control using Git & GitHub
+- Hosting via GitHub Pages
 
-- **HTML5** & **CSS3**
-- **JavaScript** *(coming soon for interactive features)*
-- **GitHub Pages** for deployment
-- Future integrations: Java (Spring Boot), Python (Flask), PostgreSQL
+Future updates will include backend-integrated demos and game projects built using **Java (Spring Boot)** and **Python (Flask)**.
 
-## 📂 Project Structure
+## 🧰 Tech Stack
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![Java](https://img.shields.io/badge/Java-007396?logo=java&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222?logo=github&logoColor=white)
+
+## 🗂️ Site Structure
 
 
 ## 🌐 Live Site
@@ -33,7 +40,6 @@ Feel free to connect with me:
 
 - GitHub: [@VincentRyanArceo](https://github.com/VincentRyanArceo)
 - LinkedIn: [vincentryanarceo](https://www.linkedin.com/in/vincentryanarceo/)
-- Email: Vincent.Ryan.Arceo@gmail.com
 
 ---
 
