@@ -32,7 +32,9 @@ Future updates will include backend-integrated demos and game projects built usi
 
 ## 🌐 Live Site
 
-[https://vincentryanarceo.github.io/vincentryan.dev/](https://vincentryanarceo.github.io/vincentryan.dev/)
+[https://vincentryanarceo.github.io/vincentryan.dev/]
+
+<-- (https://vincentryanarceo.github.io/vincentryan.dev/) -->
 
 ## 📬 Contact
 
