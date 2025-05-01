@@ -34,8 +34,6 @@ Future updates will include backend-integrated demos and game projects built usi
 
 [https://vincentryanarceo.github.io/vincentryan.dev/]
 
-<-- (https://vincentryanarceo.github.io/vincentryan.dev/) -->
-
 ## 📬 Contact
 
 Feel free to connect with me:
