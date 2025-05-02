@@ -9,10 +9,25 @@
   </head>
 
   <body>
-    <header>
+    <!-- <header>
       <div class="nav-container">
         <div class="site-title">Vincent-Ryan | Developer Portfolio</div>
         <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header> -->
+    <header>
+      <div class="nav-container">
+        <div class="site-title">Vincent-Ryan | Developer Portfolio</div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <nav id="nav-menu">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
@@ -51,8 +66,19 @@
       </p>
     </footer>
     
+    <!-- Scripts -->
     <script>
       document.querySelector('.copyright-year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
     </script>
     
   </body>

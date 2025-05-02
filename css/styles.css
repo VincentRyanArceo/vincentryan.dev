@@ -146,3 +146,68 @@ footer a:hover {
   text-decoration: underline;
   color: #a0006d;
 }
+
+/* Responsive Design for Mobile Devices */
+/* This media query applies styles for devices with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .site-title {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: left;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #nav-menu {
+    display: none;
+    width: 100%;
+  }
+
+  #nav-menu.active {
+    display: block;
+  }
+
+  .nav-container ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+
+  #about {
+    padding: 2rem 1rem;
+  }
+
+  #about h1 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+  }
+
+  /* .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #FFFDF2;
+    cursor: pointer;
+    margin-right: 1rem;
+  } */
+}
