@@ -8,10 +8,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(270deg, #4a8bdf, #effafd, #a0006d);
+  /* background: linear-gradient(270deg, #C5ADC5, #B2B5E0, #C5ADC5); */
+  background: linear-gradient(270deg, #FFFFFF, #fed4e7, #FFFFFF);
   background-size: 600% 600%;
-  animation: gradientShift 15s ease infinite;
-  color: white;
+  animation: gradientShift 20s ease infinite;
+  color: #000000;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
@@ -29,9 +30,25 @@ body {
   }
 }
 
+@keyframes gradientWave {
+  0% {
+    background-position: 100% 0%;
+  }
+  50%{
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
 /*Navigation Bar*/
 header {
-  background-color: #4a8bdf;
+  background: linear-gradient(270deg, #000000, #00ABE4, #000000);
+  /* background: linear-gradient(270deg, #4B014B, #B2B5E0, #4B014B); */
+  background-size: 400% 400%;
+  animation: gradientWave 20s ease infinite;
+  background-color: #000000;
   padding: 1rem;
 }
 
@@ -45,14 +62,14 @@ header {
 }
 
 .nav-container a {
-  color: white;
+  color: #FFFDF2;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .nav-container a:hover {
-  color: #ffd700;
+  color: #00ABE4;
 }
 
 /*About Section*/
@@ -61,21 +78,25 @@ header {
   padding: 4rem 2rem;
   max-width: 800px;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #000000;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 #about h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 #about p {
   font-size: 1.2rem;
   line-height: 1.6;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /*Main*/
@@ -88,10 +109,14 @@ main {
 
 /*Footer*/
 footer {
+  background: linear-gradient(270deg, #000000, #00ABE4, #000000);
+  background-size: 400% 400%;
+  animation: gradientWave 20s ease infinite;
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  background-color: #4a8bdf;
+  /* background-color: #000000; */
+  color: #effafd;
 }
 
 footer a {
