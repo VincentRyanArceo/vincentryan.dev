@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vincent-Ryan | Developer Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
     <header>
       <div class="nav-container">
+        <div class="site-title">Vincent Ryan | Developer Portfolio</div>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -23,40 +24,36 @@
 
     <main>
       <section id="about">
-        <h1>Hello, I'm Vincent-Ryan Arceo</h1>
+        <h1>Hello, I'm Vincent Ryan Arceo</h1>
         <p>
-          After years of helping people make big life decisions as a Realtor, 
-          I’m now focused on creating meaningful software solutions as a full-stack 
-          developer. I recently completed Tech Elevator, an intensive Java-based 
-          coding bootcamp, where I built applications using Spring Boot, PostgreSQL, and Vue.js.
+          After years of helping people make big life decisions as a Realtor,
+          I’m now focused on creating meaningful software solutions as a
+          full-stack developer. I recently completed Tech Elevator, an intensive
+          Java-based coding bootcamp, where I built applications using Spring
+          Boot, PostgreSQL, and Vue.js.
         </p>
         <p>
-          I’m continuing to grow my skill set by learning Python and building out 
-          this portfolio to showcase my progress — including real-world projects 
-          like a mock merch and music store for my band, Shadyside. Whether it’s 
-          frontend, backend, or everything in between, I’m passionate about learning 
-          and building one project at a time.
+          I’m continuing to grow my skill set by learning Python and building
+          out this portfolio to showcase my progress — including real-world
+          projects like a mock merch and music store for my band, Shadyside.
+          Whether it’s frontend, backend, or everything in between, I’m
+          passionate about learning and building one project at a time.
         </p>
       </section>
     </main>
 
     <footer>
-      <p> 
-        ©️ Vincent-Ryan Arceo |
-        <a
-          href="https://github.com/VincentRyanArceo"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >
-        |
-        <a
-          href="https://www.linkedin.com/in/vincentryanarceo/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >LinkedIn</a
-        >
+      <p>
+        © <span class="copyright-year"></span> Vincent Ryan Arceo | 
+        <a href="mailto:vincent.ryan.arceo@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a> |
+        <a href="https://github.com/VincentRyanArceo" target="_blank" rel="noopener noreferrer">GitHub</a> |
+        <a href="https://www.linkedin.com/in/vincentryanarceo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </p>
     </footer>
+    
+    <script>
+      document.querySelector('.copyright-year').textContent = new Date().getFullYear();
+    </script>
+    
   </body>
 </html>
