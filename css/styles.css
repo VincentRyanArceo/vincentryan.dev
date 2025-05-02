@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   /* background: linear-gradient(270deg, #C5ADC5, #B2B5E0, #C5ADC5); */
-  background: linear-gradient(270deg, #FFFFFF, #fed4e7, #FFFFFF);
+  background: linear-gradient(270deg, #FFFFFF, #fdd4fe, #FFFFFF);
   background-size: 600% 600%;
   animation: gradientShift 20s ease infinite;
   color: #000000;
@@ -59,7 +59,9 @@ header {
 }
 
 .site-title {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   font-weight: bold;
   color: #FFFDF2;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
