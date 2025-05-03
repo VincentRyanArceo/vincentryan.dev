@@ -9,12 +9,33 @@ body {
   flex-direction: column;
   min-height: 100vh;
   /* background: linear-gradient(270deg, #C5ADC5, #B2B5E0, #C5ADC5); */
-  background: linear-gradient(270deg, #FFFFFF, #fdd4fe, #FFFFFF);
+  background: linear-gradient(270deg, #ffffff, #fdd4fe, #ffffff);
   background-size: 600% 600%;
   animation: gradientShift 20s ease infinite;
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fffdf2;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
 }
 
 /*Gradient animation*/
@@ -34,7 +55,7 @@ body {
   0% {
     background-position: 100% 0%;
   }
-  50%{
+  50% {
     background-position: 0% 100%;
   }
   100% {
@@ -44,7 +65,7 @@ body {
 
 /*Navigation Bar*/
 header {
-  background: linear-gradient(270deg, #000000, #00ABE4, #000000);
+  background: linear-gradient(270deg, #000000, #00abe4, #000000);
   /* background: linear-gradient(270deg, #4B014B, #B2B5E0, #4B014B); */
   background-size: 400% 400%;
   animation: gradientWave 20s ease infinite;
@@ -58,12 +79,22 @@ header {
   align-items: center;
 }
 
+/* .hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fffdf2;
+  cursor: pointer;
+  margin-right: 1rem;
+} */
+
 .site-title {
   font-size: 1.4rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #FFFDF2;
+  color: #fffdf2;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
   padding-left: 1rem;
 }
@@ -78,14 +109,14 @@ header {
 }
 
 .nav-container a {
-  color: #FFFDF2;
+  color: #fffdf2;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .nav-container a:hover {
-  color: #00ABE4;
+  color: #00abe4;
 }
 
 /*About Section*/
@@ -104,14 +135,14 @@ header {
 #about h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); Saving this line to possibly switch back */
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 #about p {
   font-size: 1.2rem;
   line-height: 1.6;
-  /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); */
+  /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); Saving this line to possibly switch back */
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
@@ -125,7 +156,7 @@ main {
 
 /*Footer*/
 footer {
-  background: linear-gradient(270deg, #000000, #00ABE4, #000000);
+  background: linear-gradient(270deg, #000000, #00abe4, #000000);
   background-size: 400% 400%;
   animation: gradientWave 20s ease infinite;
   text-align: center;
@@ -151,9 +182,17 @@ footer a:hover {
 /* This media query applies styles for devices with a maximum width of 768px */
 @media screen and (max-width: 768px) {
   .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
+    align-items: flex-end;
+    position: relative;
   }
 
   .site-title {
@@ -164,7 +203,24 @@ footer a:hover {
   }
 
   .hamburger {
-    display: block;
+    /* display: block; */
+    font-size: 2rem;
+    margin-right: 1rem;
+    display: flex;
+    margin-right: 1rem;
+  }
+
+  /* Animate to X when nav is open */
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   #nav-menu {
@@ -176,11 +232,48 @@ footer a:hover {
     display: block;
   }
 
+  #nav-menu.active ul {
+    animation: dropdownFade 0.35s ease-in-out;
+  }
+
+  @keyframes navFade {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes dropdownFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .nav-container ul {
+    position: absolute;
+    top: 125%;
+    right: 0;
+    width: 80px;
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-    padding-left: 1rem;
+    align-items: center;
+    background: linear-gradient(270deg, #222, #444, #222);
+    background-size: 400% 400%;
+    animation: navFade 8s ease infinite;
+    border-radius: 10px;
+    padding: 0.75rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    gap: 0.9rem;
   }
 
   #about {
@@ -200,14 +293,4 @@ footer a:hover {
     font-size: 0.8rem;
     padding: 1.5rem 1rem;
   }
-
-  /* .hamburger {
-    display: none;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: #FFFDF2;
-    cursor: pointer;
-    margin-right: 1rem;
-  } */
 }

@@ -9,31 +9,23 @@
   </head>
 
   <body>
-    <!-- <header>
-      <div class="nav-container">
-        <div class="site-title">Vincent-Ryan | Developer Portfolio</div>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header> -->
     <header>
       <div class="nav-container">
         <div class="site-title">Vincent-Ryan | Developer Portfolio</div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-          ☰
-        </button>
-        <nav id="nav-menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
-          </ul>
-        </nav>
+        <div class="nav-toggle">
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <nav id="nav-menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -59,27 +51,44 @@
 
     <footer>
       <p>
-        © <span class="copyright-year"></span> Vincent-Ryan Arceo | 
-        <a href="mailto:vincent.ryan.arceo@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a> |
-        <a href="https://github.com/VincentRyanArceo" target="_blank" rel="noopener noreferrer">GitHub</a> |
-        <a href="https://www.linkedin.com/in/vincentryanarceo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        © <span class="copyright-year"></span> Vincent-Ryan Arceo |
+        <a
+          href="mailto:vincent.ryan.arceo@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Email Me</a
+        >
+        |
+        <a
+          href="https://github.com/VincentRyanArceo"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        |
+        <a
+          href="https://www.linkedin.com/in/vincentryanarceo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
       </p>
     </footer>
-    
+
     <!-- Scripts -->
     <script>
-      document.querySelector('.copyright-year').textContent = new Date().getFullYear();
+      document.querySelector(".copyright-year").textContent =
+        new Date().getFullYear();
     </script>
 
     <script>
-      const hamburger = document.getElementById('hamburger');
-      const navMenu = document.getElementById('nav-menu');
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
 
-      hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
       });
     </script>
-    
   </body>
 </html>
