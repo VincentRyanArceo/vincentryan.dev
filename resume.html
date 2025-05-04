@@ -12,16 +12,20 @@
       <div class="nav-container">
         <div class="site-title">Vincent-Ryan | Developer</div>
         <div class="nav-toggle">
-          <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle navigation"
+          >
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
           </button>
           <nav id="nav-menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="projects.html">Projects</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="projects.html">Projects</a></li>
             </ul>
           </nav>
         </div>
@@ -29,34 +33,120 @@
     </header>
 
     <main id="resume">
-        <div class="version-toggle">
-            <span class="version-label">Version</span>
-            <div class="version-options">
-                <button id="show-pdf">PDF</button>
-                <button id="show-html">HTML</button>
-            </div>
+      <div class="version-toggle">
+        <span class="version-label">Version</span>
+        <div class="version-options">
+          <button id="show-pdf">PDF</button>
+          <button id="show-html">HTML</button>
         </div>
+      </div>
 
-        <section id="resume-display">
-            <!-- PDF or HTML version will go here -->
-        </section>
+      <section id="resume-display">
+        <iframe
+          src="vincent-ryan-arceo-resume.pdf"
+          width="100%"
+          height="700px"
+          title="Resume PDF"
+        ></iframe>
+      </section>
     </main>
 
     <footer>
-        <p>
-            &copy; <span class="copyright-year"></span> Vincent-Ryan Arceo | 
-            <a href="mailto:vincent.ryan.arceo@gmail.com">Email Me</a> | 
-            <a href="https://github.com/VincentRyanArceo" target="_blank" rel="noopener noreferrer">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/vincentryanarceo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
+      <p>
+        &copy; <span class="copyright-year"></span> Vincent-Ryan Arceo |
+        <a href="mailto:vincent.ryan.arceo@gmail.com">Email Me</a> |
+        <a
+          href="https://github.com/VincentRyanArceo"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+        |
+        <a
+          href="https://www.linkedin.com/in/vincentryanarceo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </p>
     </footer>
 
     <script>
-        // Dynamic Year
-        document.querySelector(".copyright-year").textContent = new Date().getFullYear();
+      document.querySelector(".copyright-year").textContent =
+        new Date().getFullYear();
 
-        // Hamburger Toddle
-        const resumeDisplay = 
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      const resumeDisplay = document.getElementById("resume-display");
+
+      document.getElementById("show-pdf").addEventListener("click", () => {
+        resumeDisplay.innerHTML = `
+          <iframe src="vincent-ryan-arceo-resume.pdf" width="100%" height="700px" title="Resume PDF"></iframe>
+        `;
+      });
+
+      document.getElementById("show-html").addEventListener("click", () => {
+        resumeDisplay.innerHTML = `
+          <div class="resume-html">
+            <h2>Vincent-Ryan Arceo</h2>
+            <p><strong>Email:</strong> <a href="mailto:Vincent.Ryan.Arceo@gmail.com">Vincent.Ryan.Arceo@gmail.com</a> |
+               <strong>Phone:</strong> 937.329.0769 |
+               <strong>Location:</strong> Dayton, OH</p>
+            <p>
+              <a href="https://github.com/VincentRyanArceo" target="_blank">GitHub</a> |
+              <a href="https://www.linkedin.com/in/vincentryanarceo/" target="_blank">LinkedIn</a> |
+              <a href="https://vincentryanarceo.github.io/vincentryan.dev/" target="_blank">Portfolio</a>
+            </p>
+  
+            <h3>Professional Summary</h3>
+            <p>Passionate and adaptive professional transitioning from real estate to web development, seeking a Junior Web Developer role to leverage strengths in problem-solving, collaboration, and technical skills.</p>
+  
+            <h3>Technical Skills</h3>
+            <ul>
+              <li><strong>Languages:</strong> Java, Python, HTML, CSS, JavaScript</li>
+              <li><strong>Frameworks:</strong> Spring Boot, Vue.js</li>
+              <li><strong>Databases:</strong> PostgreSQL, SQL, E/R Diagrams</li>
+              <li><strong>Tools:</strong> Git, IntelliJ, pgAdmin, Agile, JUnit</li>
+            </ul>
+  
+            <h3>Technical Project</h3>
+            <h4>Music and Merch Management Web App</h4>
+            <ul>
+              <li>Developed a full-stack web app using Vue.js and Spring Boot with a PostgreSQL database</li>
+              <li>Implemented secure authentication, admin control, and a shopping cart system</li>
+              <li>Built RESTful API endpoints with JUnit testing and DAO structure</li>
+            </ul>
+  
+            <h3>Professional Experience</h3>
+            <h4>Licensed Real Estate Agent – Howard Hanna (2016–Present)</h4>
+            <ul>
+              <li>Boosted client satisfaction 25% through relationship management and marketing</li>
+              <li>Provided MLS market analysis using RPR tools</li>
+            </ul>
+  
+            <h4>Dental Assistant – Five Rivers Health Center (2015–2017)</h4>
+            <ul>
+              <li>Prepared 15–20 patients daily and streamlined scheduling via Dentrix</li>
+            </ul>
+  
+            <h4>Bar Manager – Sidebar 410/Salar (2010–2015)</h4>
+            <ul>
+              <li>Led staff, inventory, and operations with a 20% increase in productivity</li>
+            </ul>
+  
+            <h3>Education</h3>
+            <ul>
+              <li><strong>Tech Elevator</strong> – Java Development Bootcamp (May 2024–Present)</li>
+              <li><strong>Hondros College</strong> – Real Estate Course (March 2016–October 2016)</li>
+            </ul>
+          </div>
+        `;
+      });
     </script>
   </body>
 </html>
