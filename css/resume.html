@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume | Vincent-Ryan Arceo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="site-title">Vincent-Ryan | Developer</div>
+        <div class="nav-toggle">
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="resume">
+        <div class="version-toggle">
+            <span class="version-label">Version</span>
+            <div class="version-options">
+                <button id="show-pdf">PDF</button>
+                <button id="show-html">HTML</button>
+            </div>
+        </div>
+
+        <section id="resume-display">
+            <!-- PDF or HTML version will go here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span class="copyright-year"></span> Vincent-Ryan Arceo | 
+            <a href="mailto:vincent.ryan.arceo@gmail.com">Email Me</a> | 
+            <a href="https://github.com/VincentRyanArceo" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/vincentryanarceo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script>
+        // Dynamic Year
+        document.querySelector(".copyright-year").textContent = new Date().getFullYear();
+
+        // Hamburger Toddle
+        const resumeDisplay = 
+    </script>
+  </body>
+</html>
