@@ -181,6 +181,7 @@ footer a:hover {
   color: #a0006d;
 }
 
+/* Resume Page */
 .resume-html {
   background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
@@ -240,6 +241,26 @@ footer a:hover {
   font-size: 0.9rem;
   display: block;
   margin-top: #555;
+}
+
+#resume-display iframe {
+  width: 95vw;
+  max-width: 1200px;
+  height: 90vh;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  display: block;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.resume-pdf {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 /* Responsive Design for Mobile Devices */
@@ -356,5 +377,19 @@ footer a:hover {
   footer {
     font-size: 0.8rem;
     padding: 1.5rem 1rem;
+  }
+
+  /* resume page */
+  .resume-html {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .resume-html h2 {
+    font-size: 1.5rem;
+  }
+
+  .resume-html h3 {
+    font-size: 1.2rem;
   }
 }

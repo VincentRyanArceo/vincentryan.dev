@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vincent-Ryan | Resume</title>
     <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
     <header>
       <div class="nav-container">
-        <div class="site-title">Vincent-Ryan | Resume</div>
+        <div class="site-title">Vincent-Ryan | Developer Portfoli</div>
         <div class="nav-toggle">
           <button
             class="hamburger"
@@ -43,12 +43,12 @@
       </div>
 
       <section id="resume-display">
-        <iframe
-          src="vincent-ryan-arceo-resume.pdf"
-          width="100%"
-          height="700px"
-          title="Resume PDF"
-        ></iframe>
+        <div class="resume-pdf">
+          <iframe
+            src="vincent-ryan-arceo-resume.pdf"
+            title="Resume PDF"
+          ></iframe>
+        </div>
       </section>
     </main>
 
@@ -87,7 +87,9 @@
 
       document.getElementById("show-pdf").addEventListener("click", () => {
         resumeDisplay.innerHTML = `
-          <iframe src="vincent-ryan-arceo-resume.pdf" width="100%" height="700px" title="Resume PDF"></iframe>
+          <div class="resume-pdf">
+            <iframe src="vincent-ryan-arceo-resume.pdf" title="Resume PDF"></iframe>
+          </div>
         `;
       });
 
