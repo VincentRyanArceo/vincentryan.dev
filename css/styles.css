@@ -9,7 +9,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   /* background: linear-gradient(270deg, #C5ADC5, #B2B5E0, #C5ADC5); */
-  background: linear-gradient(270deg, #ffffff, #fdd4fe, #ffffff);
+  /* Possible main color sweep: deeaf7(lite grey) 00abe4(lite blue) 00b9d6(liter blue) */
+  background: linear-gradient(270deg, #ffffff, #ccecf1, #ffffff);
   background-size: 600% 600%;
   animation: gradientShift 20s ease infinite;
   color: #000000;
@@ -23,10 +24,12 @@ body {
   justify-content: space-between;
   width: 28px;
   height: 22px;
+
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
+
   z-index: 1100;
 }
 
