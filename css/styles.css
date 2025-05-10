@@ -152,9 +152,11 @@ header {
 /*Main*/
 main {
   flex: 1;
-  display: flex;
+  display: block;
+  padding: 2rem 1rem;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 /*Footer*/
@@ -181,12 +183,19 @@ footer a:hover {
   color: #a0006d;
 }
 
+/* Resume Container */
+.resume-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Resume Page */
 .resume-html {
   background: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   margin: 2rem auto;
-  max-width: 800px;
+  margin-top: 2.5rem;
+  max-width: 1075px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   line-height: 1.6;
@@ -227,7 +236,7 @@ footer a:hover {
 }
 
 .resume-html a {
-  columns: #00abe4;
+  color: #00abe4;
   text-decoration: underline;
 }
 
@@ -246,10 +255,11 @@ footer a:hover {
 #resume-display iframe {
   width: 95vw;
   max-width: 1200px;
-  height: 90vh;
+  height: 70vh;
   border: none;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin: 2rem auto;
+  margin-top: .5rem;
   display: block;
   border-radius: 8px;
   background-color: white;
@@ -261,6 +271,54 @@ footer a:hover {
   width: 100%;
   padding: 2rem;
   box-sizing: border-box;
+}
+
+.version-toggle {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: fit-content;
+  margin: 2rem auto 0 auto;
+  background: #ffffffcc;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.25rem 1rem;
+  z-index: 1;
+}
+
+.version-group {
+  display: flex;
+  align-items: center;
+}
+
+.version-label {
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+.version-options {
+  display: flex;
+  gap: 0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.version-options button {
+  background: #00abe4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.version-options button:hover {
+  background: #0089b3;
+}
+
+.version-options button.active {
+  background: #006f8e;
 }
 
 /* Responsive Design for Mobile Devices */
