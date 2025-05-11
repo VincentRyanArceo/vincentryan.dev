@@ -27,7 +27,7 @@ Future updates will include backend-integrated demos and game projects built usi
 ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222?logo=github&logoColor=white)
 
-## 🗂️ Site Structure
+<!-- ## 🗂️ Site Structure -->
 
 
 ## 🌐 Live Site
